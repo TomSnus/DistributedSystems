@@ -1,3 +1,5 @@
+package Protocol;
+
 /**
  * Created by Faßreiter on 14.04.2017.
  */

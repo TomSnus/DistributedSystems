@@ -2,7 +2,7 @@ package server;
 
 import java.io.*;
 import java.net.Socket;
-import chat.ProtocolContract.ProtocolEntry;
+import Protocol.ProtocolContract.ProtocolEntry;
 public class ServerEndpoint extends Thread implements IChatListener {
 
     private String name;

@@ -1,10 +1,9 @@
 package client;
 
-import chat.ProtocolContract;
+import Protocol.ProtocolContract.ProtocolEntry;
 
 import java.io.*;
 import java.net.Socket;
-import chat.ProtocolContract.ProtocolEntry;
 public class ClientEndpoint extends Thread implements IMessageSender {
 
     // Vorschlag fuer Attribute, bitte erweitern oder aendern:
