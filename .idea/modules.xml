@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/3.1 - Sockets/3.1 - Sockets.iml" filepath="$PROJECT_DIR$/3.1 - Sockets/3.1 - Sockets.iml" />
       <module fileurl="file://$PROJECT_DIR$/3.2 - Sockets with Threadpool/3.2 - Sockets with Threadpool.iml" filepath="$PROJECT_DIR$/3.2 - Sockets with Threadpool/3.2 - Sockets with Threadpool.iml" />
       <module fileurl="file://$PROJECT_DIR$/4.1 - Chat Application/4.1 - Chat Application.iml" filepath="$PROJECT_DIR$/4.1 - Chat Application/4.1 - Chat Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5. - RMI/5. - RMI.iml" filepath="$PROJECT_DIR$/5. - RMI/5. - RMI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5. - RMI - Callback/5. - RMI - Callback.iml" filepath="$PROJECT_DIR$/5. - RMI - Callback/5. - RMI - Callback.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed systems.iml" filepath="$PROJECT_DIR$/distributed systems.iml" />
     </modules>
   </component>
