@@ -24,7 +24,7 @@ public class Client {
             CallbackIF callbackHandler = new CallbackImpl();
             CallbackIF callbackStub = (CallbackIF) UnicastRemoteObject.exportObject(callbackHandler, 0);
             feServer.analysieren(new Roentgenbild(new Date(), "Test Person", new byte[10]), callbackStub);
-          //  System.out.println(bericht.getBericht());
+
         }catch (Exception e) {
             e.printStackTrace();
         }

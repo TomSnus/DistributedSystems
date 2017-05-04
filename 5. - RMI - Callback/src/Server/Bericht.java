@@ -23,7 +23,7 @@ public class Bericht implements Serializable{
         sb.append("Bericht vom: ");
         sb.append(datum);
         sb.append("\n");
-        sb.append("Diagnose" + diagnose + " weiteres Vorgehen: " + weiteresVorgehen);
+        sb.append("Diagnose " + diagnose + " weiteres Vorgehen: " + weiteresVorgehen);
         return sb.toString();
     }
 }
