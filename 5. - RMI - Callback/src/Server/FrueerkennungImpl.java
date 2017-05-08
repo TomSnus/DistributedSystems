@@ -16,10 +16,8 @@ public class FrueerkennungImpl implements FrueerkennungIF {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Sende analysierte Daten");
-        Bericht bericht = referenz.sendBericht(r.getAufnahmeVom(), "nix", "weiteres vorgehen");
-        System.out.println("Bericht erhalten");
-        System.out.println(bericht.getBericht());
+        new Thread(new BestaetigungsHandler(r, referenz)).start();
+
 
 
 
