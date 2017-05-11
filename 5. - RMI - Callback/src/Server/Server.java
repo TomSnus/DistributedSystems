@@ -17,6 +17,7 @@ public class Server {
 
             Registry r = LocateRegistry.createRegistry(1099);
             r.bind("bericht", stub);
+            System.out.println("Server running...");
         } catch (Exception e) {
             e.printStackTrace();
         }
