@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/5. - RMI/5. - RMI.iml" filepath="$PROJECT_DIR$/5. - RMI/5. - RMI.iml" />
       <module fileurl="file://$PROJECT_DIR$/5. - RMI - Callback/5. - RMI - Callback.iml" filepath="$PROJECT_DIR$/5. - RMI - Callback/5. - RMI - Callback.iml" />
       <module fileurl="file://$PROJECT_DIR$/5. RMI - Call by Reference/5. RMI - Call by Reference.iml" filepath="$PROJECT_DIR$/5. RMI - Call by Reference/5. RMI - Call by Reference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6. RMI - Chat Application/6. RMI - Chat Application.iml" filepath="$PROJECT_DIR$/6. RMI - Chat Application/6. RMI - Chat Application.iml" />
       <module fileurl="file://$PROJECT_DIR$/distributed systems.iml" filepath="$PROJECT_DIR$/distributed systems.iml" />
     </modules>
   </component>
