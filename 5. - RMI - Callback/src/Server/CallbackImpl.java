@@ -1,4 +1,4 @@
-package Client;
+package Server;
 
 import Server.CallbackIF;
 import Server.Bericht;

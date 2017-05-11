@@ -1,12 +1,7 @@
 package Client;
 
-import Server.Bericht;
-import Server.CallbackIF;
-import Server.FrueerkennungIF;
-import Server.Roentgenbild;
-import com.sun.jndi.ldap.Ber;
+import Server.*;
 
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
