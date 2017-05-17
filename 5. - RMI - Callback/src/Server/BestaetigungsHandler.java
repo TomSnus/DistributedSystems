@@ -16,10 +16,8 @@ public class BestaetigungsHandler implements Runnable {
     @Override
     public void run() {
         try {
-            System.out.println("Sende analysierte Daten");
-            Bericht bericht = referenz.sendBericht(r.getAufnahmeVom(), "nix", "weiteres vorgehen");
-            System.out.println("Bericht erhalten");
-            System.out.println(bericht.getBericht());
+            System.out.println("Sende Bericht");
+            referenz.sendBericht(new Bericht(r.getAufnahmeVom(), "nix", "weiteres vorgehen"));
         } catch (Exception e) {
             e.printStackTrace();
         }
