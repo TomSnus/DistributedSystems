@@ -17,9 +17,6 @@ public class Roentgenbild implements RoentgenbildIF{
         this.rawData = rawData;
     }
 
-    public Date getAufnahmeVom() {
-        return aufnahmeVom;
-    }
 
     public void setAufnahmeVom(Date aufnahmeVom) {
         this.aufnahmeVom = aufnahmeVom;
