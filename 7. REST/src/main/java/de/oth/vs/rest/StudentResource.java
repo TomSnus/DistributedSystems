@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Path("studentaffairs")
 public class StudentResource {
-    List<Student> database = new ArrayList<Student>();
+    public static final List<Student> database = new ArrayList<Student>();
 
     @POST
     @Path("student")
@@ -29,13 +29,13 @@ public class StudentResource {
     @GET
     @Path("student/{id}")
     public Student getStudentById(@PathParam("id") int id) {
-        return new Student(id, "test", 123, new Address("test", "regensburg"));
+        return  database.stream().filter(i -> i.getId() == id).findFirst().get();
     }
 
     @DELETE
     @Path("student/{id}")
     public void deleteStudentById(@PathParam("id") int id) {
-
+        database.remove(database.stream().filter(i -> i.getId() == id).findFirst().get());
     }
 
 
