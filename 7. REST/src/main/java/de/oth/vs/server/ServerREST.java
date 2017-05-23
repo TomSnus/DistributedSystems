@@ -7,6 +7,8 @@ import java.net.InetSocketAddress;
 import java.net.URISyntaxException;
 import javax.swing.JOptionPane;
 import javax.ws.rs.ext.RuntimeDelegate;
+
+import de.oth.vs.rest.StudentResource;
 import org.glassfish.jersey.server.ResourceConfig;
 
 public class ServerREST {

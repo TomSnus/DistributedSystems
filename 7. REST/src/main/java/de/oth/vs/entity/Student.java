@@ -1,8 +1,14 @@
 package de.oth.vs.entity;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Created by Jon on 23.05.2017.
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
     private int id;
     private String name;
@@ -66,5 +72,18 @@ public class Student {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Id: ")
+                .append(id)
+                .append("Name: ")
+                .append(name)
+                .append("ECTS: ")
+                .append(ects)
+                .append(address);
+        return builder.toString();
     }
 }
