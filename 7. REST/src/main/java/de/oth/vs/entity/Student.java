@@ -1,8 +1,6 @@
 package de.oth.vs.entity;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 
 /**
  * Created by Jon on 23.05.2017.
@@ -10,7 +8,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
-    private int id;
+    @XmlAttribute(name = "MatrikelNr.")
+    public int id;
     private String name;
     private int ects;
     private Address address;
