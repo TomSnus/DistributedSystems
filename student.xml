@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student MatrikelNr.="666">
+   <name>Max</name>
+   <ects>250</ects>
+   <address>
+      <str>Test</str>
+      <place>Regensburg</place>
+   </address>
+</student>

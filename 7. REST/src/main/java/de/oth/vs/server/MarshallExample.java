@@ -11,7 +11,7 @@ import java.io.File;
 public class MarshallExample {
 
     public static void main(String[] args)  {
-    
+
         try {
             System.setProperty("javax.xml.bind.context.factory","org.eclipse.persistence.jaxb.JAXBContextFactory");
             JAXBContext context = JAXBContext.newInstance(Student.class);
