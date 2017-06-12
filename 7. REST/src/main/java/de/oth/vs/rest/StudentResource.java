@@ -51,17 +51,13 @@ public class StudentResource {
                     r.getString("vorname")+" "+r.getString("nachname"),
                     r.getInt("ects"),
                     new Address(r.getString("strasse"), r.getString("ort")));
-            
+            c.close();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        try {
-            c.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+     
         return  returnStudent;
     }
 
