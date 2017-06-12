@@ -14,6 +14,10 @@ import de.oth.vs.entity.Student;
 import de.oth.vs.rest.StudentResource;
 import org.glassfish.jersey.server.ResourceConfig;
 
+/*
+Example GET Request: http://localhost:8080/webresources/studentaffairs/student/152
+ */
+
 public class ServerREST {
 
     static final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

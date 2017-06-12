@@ -14,5 +14,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="org.glassfish.jersey.media:jersey-media-moxy:2.25.1" level="project" />
     <orderEntry type="library" exported="" name="org.glassfish.jersey.containers:jersey-container-jdk-http:2.25.1" level="project" />
+    <orderEntry type="library" exported="" name="mysql:mysql-connector-java:6.0.6" level="project" />
   </component>
 </module>
