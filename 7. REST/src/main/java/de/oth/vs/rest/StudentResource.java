@@ -1,6 +1,7 @@
 package de.oth.vs.rest;
 
 import com.mysql.cj.api.mysqla.result.Resultset;
+import de.oth.vs.DB.DbHelper;
 import de.oth.vs.entity.Address;
 import de.oth.vs.entity.Student;
 
@@ -17,6 +18,7 @@ import java.util.List;
 @Path("studentaffairs")
 public class StudentResource {
     public static final List<Student> database = new ArrayList<Student>();
+    private DbHelper dbHelper = new DbHelper();
 
     @POST
     @Path("student")
@@ -38,23 +40,20 @@ public class StudentResource {
     @Path("studentdb/{id}")
     public Student getStudentById(@PathParam("id") int id) {
         Student returnStudent = null;
-        Connection c = null;
+
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            c = DriverManager.getConnection("jdbc:mysql://im-vm-011/vs-08", "vs-08", "vs-08-pw");
-            Statement stmt = c.createStatement();
-            String query = "SELECT matrikelNr, vorname, nachname, ects, strasse, ort FROM Student WHERE matrikelNr = "+id;
+
+            Statement stmt = dbHelper.connection.createStatement();
+            String query = "SELECT matrikelNr, vorname, nachname, ects, strasse, ort FROM Student WHERE matrikelNr = " + id;
             ResultSet r = stmt.executeQuery(query);
             r.first();
             returnStudent
                     = new Student(id,
-                    r.getString("vorname")+" "+r.getString("nachname"),
+                    r.getString("vorname") + " " + r.getString("nachname"),
                     r.getInt("ects"),
                     new Address(r.getString("strasse"), r.getString("ort")));
-            c.close();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+            dbHelper.connection.close();
+        }catch (SQLException e) {
             e.printStackTrace();
         }
      
