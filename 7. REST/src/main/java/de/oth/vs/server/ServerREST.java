@@ -10,7 +10,9 @@ import javax.swing.JOptionPane;
 import javax.ws.rs.ext.RuntimeDelegate;
 
 import de.oth.vs.entity.Address;
+import de.oth.vs.entity.Exam;
 import de.oth.vs.entity.Student;
+import de.oth.vs.rest.ExamResource;
 import de.oth.vs.rest.StudentResource;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -32,7 +34,7 @@ public class ServerREST {
         
         ResourceConfig config = new ResourceConfig();
         config.register(StudentResource.class);
-
+        config.register(ExamResource.class);
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         HttpHandler handler = RuntimeDelegate.getInstance().createEndpoint(config, HttpHandler.class);
         server.createContext("/webresources", handler);
