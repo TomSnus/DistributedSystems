@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 import javax.ws.rs.ext.RuntimeDelegate;
 
 import de.oth.vs.entity.Address;
-import de.oth.vs.entity.Exam;
 import de.oth.vs.entity.Student;
 import de.oth.vs.rest.ExamResource;
 import de.oth.vs.rest.StudentResource;
@@ -29,7 +28,7 @@ public class ServerREST {
 
         //Fill the Student-List with Data
         for(int i = 0; i < 250; i++){
-            StudentResource.database.add(new Student(i, randomString(5), rnd.nextInt(300), new Address(randomString(10), randomString(7))));
+            StudentResource.STUDENT_LIST.add(new Student(i, randomString(5), rnd.nextInt(300), new Address(randomString(10), randomString(7))));
         }
         
         ResourceConfig config = new ResourceConfig();

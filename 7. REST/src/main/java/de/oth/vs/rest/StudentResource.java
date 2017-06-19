@@ -1,13 +1,11 @@
 package de.oth.vs.rest;
 
-import com.mysql.cj.api.mysqla.result.Resultset;
 import de.oth.vs.DB.DbHelper;
 import de.oth.vs.entity.Address;
 import de.oth.vs.entity.Student;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,25 +15,66 @@ import java.util.List;
  */
 @Path("studentaffairs")
 public class StudentResource {
-    public static final List<Student> database = new ArrayList<Student>();
+
+    /** List with example Data **/
+    public static final List<Student> STUDENT_LIST = new ArrayList<Student>();
     private DbHelper dbHelper = new DbHelper();
 
+    /**
+     *
+     * example list operations
+     *
+     */
+
+    /**
+     * Add Student Object to example list
+     * @param student
+     */
     @POST
     @Path("student")
     @Consumes({MediaType.APPLICATION_JSON,	MediaType.APPLICATION_XML})
     public void addStudent(Student student){
-        if(!database.contains(student)) {
-            database.add(student);
+        if(!STUDENT_LIST.contains(student)) {
+            STUDENT_LIST.add(student);
         }
         System.out.println(student + "\n" + "added");
     }
 
+    /**
+     * Get Student from example list by ID
+     * @param id
+     * @return Student Object
+     */
     @GET
     @Path("student/{id}")
     public Student getStudentSbById(@PathParam("id") int id) {
-        return  database.stream().filter(i -> i.getId() == id).findFirst().get();
+        return  STUDENT_LIST.stream().filter(i -> i.getId() == id).findFirst().get();
     }
 
+
+    /**
+     * Delete Student from example list by ID
+     * @param id
+     */
+    @DELETE
+    @Path("student/{id}")
+    public void deleteStudentById(@PathParam("id") int id) {
+        STUDENT_LIST.remove(STUDENT_LIST.stream().filter(i -> i.getId() == id).findFirst().get());
+    }
+
+
+    /**
+     *
+     * DB Operations
+     *
+     */
+
+
+    /**
+     * Select Student from Database by ID
+     * @param id
+     * @return Student Object
+     */
     @GET
     @Path("studentdb/{id}")
     public Student getStudentById(@PathParam("id") int id) {
@@ -56,15 +95,7 @@ public class StudentResource {
         }catch (SQLException e) {
             e.printStackTrace();
         }
-     
+
         return  returnStudent;
     }
-
-    @DELETE
-    @Path("student/{id}")
-    public void deleteStudentById(@PathParam("id") int id) {
-        database.remove(database.stream().filter(i -> i.getId() == id).findFirst().get());
-    }
-
-
 }
